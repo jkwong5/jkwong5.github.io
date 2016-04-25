@@ -1,0 +1,17 @@
+$(document).ready(function(){
+  $("#toggle").mouseenter(function(){
+  $("li").show(500);
+  });
+  $("#toggle").mouseleave(function(){
+  $("li").hide(800);
+  });
+  $(".toggleA").mouseover(function(){
+  $(".panelA").slideToggle("slow");
+  });
+  $(".toggleB").mouseover(function(){
+  $(".panelB").slideToggle("slow");
+  });
+  $(".toggleC").mouseover(function(){
+  $(".panelC").slideToggle("slow");
+  });
+});

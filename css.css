@@ -1,0 +1,117 @@
+body{
+  background-image: url("128-168.jpg");
+  background-color: grey;
+  background-repeat: repeat;
+  padding: 5% 5% 5% 5%;
+}
+h1{
+  text-align: center;
+  font-family: fantasy;
+}
+
+.bar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #131313;
+    opacity: .5;
+
+}
+
+.nav{
+  background-color: #131313;
+  position: fixed;
+  width:100%;
+}
+
+.nav ul{
+  list-style: none;
+}
+
+.nav ul li{
+    display: inline-block;
+    clear: left;
+}
+
+.nav ul li a{
+  display: block;
+  color: #ffffff;
+  font-size: 1em;
+  margin: 0 50px 0 50px;
+  text-shadow: 1px 1px 1px #000000;
+  text-align: center;
+  text-decoration: none;
+}
+
+.nav ul li a:hover{
+  color: #a8d6ee;
+  text-decoration: none;
+}
+
+.top{
+  text-align: center;
+  text-decoration: none;
+}
+
+.top a{
+  text-decoration: none;
+}
+
+.content{
+  padding: 5% 5% 10% 5%;
+  border-radius: 25px;
+  background: white;
+}
+
+.banner{
+  background-image: url("banner.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  margin: auto;
+  padding: 10% 0 0 0;
+  }
+
+.portrait{
+  background-image: url("profile.jpg");
+  background-size: contain;
+  width: 150px;
+  height: 150px;
+  border-radius: 150px;
+  margin: auto;
+}
+
+.panel{
+  display:none;
+}
+
+
+.works{
+  height: 600px;
+}
+
+.works div:first-child{
+  float:left;
+  width: 33.33%;
+  position: relative;
+  overflow: hidden;
+  left:0;
+}
+
+.works div:nth-child(2){
+  float: left;
+  width: 33.33%;
+  position:relative;
+  overflow: hidden;
+}
+
+.works div:last-child{
+  float: left;
+  width:33.33%;
+  position: relative;
+  overflow: hidden;
+}
+
+.works div img{
+  width: 300px;
+  }
