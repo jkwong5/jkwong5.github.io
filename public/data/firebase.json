@@ -1,0 +1,57 @@
+[
+  {
+    "section": "projects",
+    "project": [
+      {
+        "name": "Space Invaders",
+        "repository": "https://github.com/jkwong5/ParkingHOS",
+        "url": "http://latfa.herokuapp.com/",
+        "description": "",
+        "time": "2016-07"
+      },
+      {
+        "name": "Portfolio",
+        "repository": "https://github.com/jkwong5/301n3-portfolio",
+        "url": "https://jonwong.herokuapp.com/",
+        "description": "",
+        "time": "2016-07"
+      },
+      {
+        "name": "Lazy Cover Letter",
+        "repository": "https://github.com/jkwong5/LZCL",
+        "url": "https://jkwong5.github.io/LZCL/index.html",
+        "description": "",
+        "time": "2016-04"
+      }
+    ]
+  },
+  {
+    "section": "skills",
+    "skill": [
+      {
+          "name": "Marketing",
+          "list": [
+            "Creative",
+            "Curious",
+            "Communication"
+          ]
+      },
+      {
+          "name": "Management",
+          "list": [
+            "Creative",
+            "Curious",
+            "Communication"
+          ]
+      },
+      {
+          "name": "Developer",
+          "list": [
+            "Creative",
+            "Curious",
+            "Communication"
+          ]
+      }
+    ]
+  }
+]

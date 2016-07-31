@@ -1,0 +1,23 @@
+{
+  "name": "jkwong5.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "npm": "^3.10.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jkwong5/jkwong5.github.io.git"
+  },
+  "author": "Jonathan Wong",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jkwong5/jkwong5.github.io/issues"
+  },
+  "homepage": "https://github.com/jkwong5/jkwong5.github.io#readme"
+}

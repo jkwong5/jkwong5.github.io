@@ -1,93 +1,78 @@
 <!DOCTYPE html>
+<html>
 <head>
-  <title>Jonathan Wong/'s GitHub</title>
-  <link rel="stylesheet" type="text/css" href="css.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-  <script type="text/javascript" src="jquery.js"></script>
-  <script type="text/javascript" src="script.js"></script>
+  <title>Jonathan Wong's GitHub</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1 , width=device-width">
+  <link rel="stylesheet" type="text/css" href="normalize.css">
+  <link rel="stylesheet" type="text/css" href="base.css">
+  <link rel="stylesheet" type="text/css" href="layout.css">
+  <link rel="stylesheet" type="text/css" href="module.css">
+  <link rel="stylesheet" href="vendor/font-awesome.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-database.js"></script>
+
+  <script id="projectTemplate" type="text/x-handlebars-template">
+    <article>
+      <h3>{{name}}</h3>
+      <a class="imageUrl" href='{{url}}'>
+      <img src='{{pic}}' style="width:50%;hight:45%;border:1px">
+      </a>
+      <br>
+      <section class="body">{{{body}}}</section>
+    </article>
+  </script>
 </head>
 <body>
-
-<!--Menu-->
-<div class="bar" id="toggle">
-  <nav class="nav">
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#portfolio">Portfolio</a></li>
-      <li><a href="#blog">Blog</a></li>
-      <li><a href="#resume">Resume</a></li>
-    </ul>
-  </nav>
-</div>
+  <header>
+  <!--Menu-->
+  <div class="navBar" id="navToggle">
+    <nav class="nav">
+      <ul>
+        <a href="#about"><li>About</li></a>
+        <a href="#projects"><li>Projects</li></a>
+        <a href="#skills"><li>Skills</li></a>
+      </ul>
+    </nav>
+  </div>
+  </header>
 <!--Content-->
-<div class="content" id="top">
-  <div class="banner">
-  </div>
+  <main class="content" id="top">
+    <div class="banner"></div>
 
-  <div class="about">
-    <h1>About Me</h1>
-    <div class="portrait">
-    </div>
-      <p id="greeting">!</p>
-      <p>I'm glad you have stopped by on my homepage. I graduated from University of Illinois with a B.S. in Marketing and B.S. in Business Management.  Working for two Fortune <span title="Amazon Inc, and Microsoft Corp"> 500 companies,</span> I found myself intrigued by the amazing work that is produced by talented individuals in the world of programing.  In my five years of experience, I have grown to embrace technology as an evolving medium with an abundance of opportunities.</p>
-      <p>My mission is to become a sucessful programmer that can bring creativity, vision, and a business mindset to help humanity become much more efficient. My dream is to travel the world, strategize and solve problems around the world with the power of technology. I plan to use this page as a preface to my profiled works on GitHub.</p>
-      <p>Thanks again for stopping by!</p>
-      <p>- Jonathan</p>
-  </div>
+    <section class="about">
 
-  <div class="portfolio">
-    <a name="works"></a>
-    <h1>Portfolio</h1>
-    <div class="works">
-      <div class="blockA">
-        <img src="LZCL.jpg" class="toggleA"/>
-          <div class="panelA">
-          <h3>Lazy Cover Letter</h3>
-          <p>This is a project where I wanted to create a page that stored inputs and displayed outputs using Javascript.  This also includes the use of alerts.</p>
-          </div>
-      </div>
-      <div class="blockB">
-        <img src="#" class="toggleB"/>
-        <div class="panelB">
-          <h3>GTG(In Progress)</h3>
-          <p>Here is a project with the mission to combine API elements to create the most direct and easiest path to destinations to maximize your day.</p>
+      <h1>About Me</h1>
+      <div class="portrait"></div>
+        <p id="greeting"></p>
+        <p>I'm glad you have stopped by on my homepage. I graduated from University of Illinois with a B.S. in Marketing and B.S. in Business Management.  Working for two Fortune <span title="Amazon Inc, and Microsoft Corp"> 500 companies,</span> I found myself intrigued by the user experience that is produced by talented individuals in the world of front end development.  In my five years of experience, I have grown to embrace technology as an evolving medium with an abundance of opportunities.</p>
+        <p>My mission is to become a sucessful programmer that can bring creativity, vision, and a business mindset to help humanity become more efficient and unified. My dream is to travel the world, strategize and solve problems with the power of technology. I plan to use this page as a preface to my projects on GitHub.</p>
+        <p>Thanks for stopping by!</p>
+        <p>- Jonathan</p>
+    </section>
+
+    <section class="projects">
+        <div id="projectsData" class="projectsData">projects
+
         </div>
-      </div>
-      <div class="blockC">
-        <img src="#" class="toggleC"/>
-        <div class="panelC">
-          <h3>PlanYes!(Brainstorming)</h3>
-          <p>I want to create a website for tips and tricks with indepth resources for users planning to get married.</p>
-        </div>
-      </div>
-    </div>
-      <div class="top">
         <a href="#top">&uArr;</a>
-      </div>
-  </div>
+    </section>
 
-  <div class="blog">
-    <a name="blog"></a>
-    <h1>Blog</h1>
-    <h2> API from my feed</h2>
-    <div class="top">
+    <section id="skills">
+      <div id="skillsData" class="skillsData">Skills</div>
       <a href="#top">&uArr;</a>
-    </div>
-  </div>
-
-  <div class="resume">
-    <a name="resume"></a>
-    <h1>Resume</h1>
-    <img src="#" href="#"/>
-    <div class="top">
-      <a href="#top">&uArr;</a>
-    </div>
-  </div>
-</div>
+    </section>
+  </main>
 
 <!--Footer-->
 <footer class="footer">
 
 </footer>
 
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="script.js"></script>
 </body>
+</html>
