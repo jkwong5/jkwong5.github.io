@@ -1,9 +1,11 @@
-body{
-  background-image: url("128-168.jpg");
-  background-color: grey;
-  background-repeat: repeat;
-  padding: 5% 5% 5% 5%;
+html {
+    height: 100%;
 }
+
+body{
+  height: 100%;
+}
+
 h1{
   text-align: center;
   font-family: fantasy;
@@ -48,6 +50,37 @@ h1{
   text-decoration: none;
 }
 
+.img1, .img2, .img3 {
+  position: relative;
+  opacity: 0.65;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+.img1 {
+    /* The image used */
+    background-image: url('img_parallax.jpg');
+    /* Full height */
+    min-height: 100%;
+}
+
+.img2 {
+    /* The image used */
+    background-image: url('img_parallax1.jpg');
+    /* Full height */
+    min-height: 100%;
+}
+
+.img3 {
+    /* The image used */
+    background-image: url('img_parallax2.jpg');
+    /* Full height */
+    min-height: 100%;
+}
+
 .top{
   text-align: center;
   text-decoration: none;
@@ -79,6 +112,12 @@ h1{
   height: 150px;
   border-radius: 150px;
   margin: auto;
+}
+
+.greeting{
+  height:200px;
+  background-color:gray;
+  font-size:36px
 }
 
 .panel{

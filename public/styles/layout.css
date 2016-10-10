@@ -1,0 +1,97 @@
+/*top nav*/
+.nav{
+  background-color: #131313;
+  position: fixed;
+  width:100%;
+}
+
+.nav ul{
+  list-style: none;
+}
+
+.nav ul li{
+    display: inline-block;
+    clear: left;
+}
+
+/*.nav ul li a{
+  display: block;
+  color: #ffffff;
+  font-size: 1em;
+  margin: 0 50px 0 50px;
+  text-shadow: 1px 1px 1px #000000;
+  text-align: center;
+  text-decoration: none;
+}
+
+.nav ul li a:hover{
+  color: #a8d6ee;
+  text-decoration: none;
+}*/
+
+/*menu icon*/
+/*.banner{
+  background-image: url('/assets/profile.jpg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  margin: auto;
+  padding: 10% 0 0 0;
+  }*/
+
+.about{
+  padding: 5% 5% 5% 5%;
+  background-color:white;
+}
+
+.profile{
+  top: 20px;
+  padding: 4% 2% 0 0;
+  float: left;
+}
+
+.projects{
+  height: 200px;
+  background-color:blue;
+}
+
+.skills{
+  height: 200px;
+  background-color: red;
+}
+
+
+.panel{
+  display:none;
+}
+
+
+.works{
+  height: 600px;
+}
+
+.works div:first-child{
+  float:left;
+  width: 33.33%;
+  position: relative;
+  overflow: hidden;
+  left:0;
+}
+
+.works div:nth-child(2){
+  float: left;
+  width: 33.33%;
+  position:relative;
+  overflow: hidden;
+}
+
+.works div:last-child{
+  float: left;
+  width:33.33%;
+  position: relative;
+  overflow: hidden;
+}
+
+.works div img{
+  width: 300px;
+  }

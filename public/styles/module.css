@@ -1,0 +1,59 @@
+/*parallax*/
+
+.img1, .img2, .img3 {
+  position: relative;
+  opacity: 0.65;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+.img1 {
+    /* The image used */
+    background-image: url('http://orig07.deviantart.net/5287/f/2012/195/c/b/city_wallpaper_by_faytalitygfx-d577mqg.jpg');
+    /* Full height */
+    min-height: 100%;
+}
+
+.img2 {
+    /* The image used */
+    background-image: url('http://cdn.wallpapersafari.com/66/55/brMOq6.jpg');
+    /* Full height */
+    height: 50%;
+}
+
+.img3 {
+    /* The image used */
+    background-image: url('http://cdn.wallpapersafari.com/55/19/wn7dGv.jpg');
+    /* Full height */
+    height: 50%;
+}
+
+.title {
+  position: absolute;
+  left: 0;
+  top: 60%;
+  width: 100%;
+  font-size: 2em;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.caption {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+}
+
+.caption span{
+  background-color: #111;
+  color: #fff;
+  padding: 18px;
+  font-size: 25px;
+  letter-spacing: 10px;
+}
