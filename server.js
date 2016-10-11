@@ -22,3 +22,12 @@ app.get('*', function(request, response) {
 app.listen(port, function() {
   console.log('Server started on port ' + port + '!');
 });
+
+var firebase = require("firebase/app");
+require("firebase/auth");
+require("firebase/database");
+
+firebase.initializeApp({
+  serviceAccount: "path/to/serviceAccountCredentials.json",
+  databaseURL: "https://githubio-abe13.firebaseio.com/"
+});

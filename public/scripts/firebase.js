@@ -1,11 +1,12 @@
-  // Initialize Firebase
-  var config = {
-    apiKey: 'AIzaSyDFWPuIN2KQvBRCG2LdcMkKoEg9E4Ayeko',
-    authDomain: 'githubio-abe13.firebaseapp.com',
-    databaseURL: 'https://githubio-abe13.firebaseio.com',
-    storageBucket: '',
-  };
-  firebase.initializeApp(config);
+// Initialize Firebase
+var config = {
+  apiKey: 'AIzaSyDFWPuIN2KQvBRCG2LdcMkKoEg9E4Ayeko',
+  authDomain: 'githubio-abe13.firebaseapp.com',
+  databaseURL: 'https://githubio-abe13.firebaseio.com',
+  storageBucket: 'githubio-abe13.appspot.com',
+  messagingSenderId: '890366495335'
+};
+firebase.initializeApp(config);
 
   var storage = firebase.storage();
   var storageRef = storage.ref();

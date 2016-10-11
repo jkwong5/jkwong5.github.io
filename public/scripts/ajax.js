@@ -5,7 +5,7 @@
     $.ajax({
       url: 'github/user/repos',
       type: 'GET',
-      // headers: {'authorization': 'token ' + GITHUB_TOKEN},
+      headers: {'authorization': 'token ' + GITHUB_TOKEN},
       success: function(data){
         repos.all = data;
       }
