@@ -27,7 +27,7 @@ var firebase = require("firebase/app");
 require("firebase/auth");
 require("firebase/database");
 
-firebase.initializeApp({
-  serviceAccount: "path/to/serviceAccountCredentials.json",
-  databaseURL: "https://githubio-abe13.firebaseio.com/"
-});
+var config = {
+  // ...
+};
+firebase.initializeApp(config);

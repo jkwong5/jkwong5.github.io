@@ -8,16 +8,16 @@ var config = {
 };
 firebase.initializeApp(config);
 
-  var storage = firebase.storage();
-  var storageRef = storage.ref();
-  var imagesRef = storageRef.child('images');
-  var database = firebase.database();
-  var rootRef = firebase.database().ref();
+var storage = firebase.storage();
+var storageRef = storage.ref();
+var imagesRef = storageRef.child('images');
+var database = firebase.database();
+var rootRef = firebase.database().ref();
 
-  var currentData = document.getElementById('classData');
-  var titleRef = rootRef.child('title');
-  var bodyRef = rootRef.child('Class1/body');
-  var dataRef = firebase.database().ref('Class1');
-  bodyRef.on('value', function(snapshot){
-    currentData.innerText = snapshot.val();
-  });
+var currentData = document.getElementById('skillsData');
+var titleRef = rootRef.child('0');
+var bodyRef = rootRef.child('0/project');
+var dataRef = firebase.database().ref('0');
+bodyRef.on('value', function(snapshot){
+  currentData.innerText = snapshot.val();
+});
