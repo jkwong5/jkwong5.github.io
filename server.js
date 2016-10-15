@@ -24,7 +24,7 @@ app.listen(port, function() {
 });
 
 var firebase = require("firebase/app");
-require("firebase/auth");
+// require("firebase/auth");
 require("firebase/database");
 
 var config = {

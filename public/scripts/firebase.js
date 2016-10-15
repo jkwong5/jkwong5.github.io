@@ -1,3 +1,5 @@
+(function() {
+
 // Initialize Firebase
 var config = {
   apiKey: 'AIzaSyDFWPuIN2KQvBRCG2LdcMkKoEg9E4Ayeko',
@@ -8,16 +10,47 @@ var config = {
 };
 firebase.initializeApp(config);
 
-var storage = firebase.storage();
-var storageRef = storage.ref();
-var imagesRef = storageRef.child('images');
-var database = firebase.database();
-var rootRef = firebase.database().ref();
+// var storage = firebase.storage();
+// var storageRef = storage.ref();
+// var imagesRef = storageRef.child('images');
+// var database = firebase.database();
+// var rootRef = firebase.database().ref();
+//
+// var currentData = document.getElementById('skillsData');
+// var titleRef = rootRef.child('0');
+// var bodyRef = rootRef.child('0/project');
+// var dataRef = firebase.database().ref('0');
+// bodyRef.on('value', function(snapshot){
+//   currentData.innerText = snapshot.val();
+// });
 
-var currentData = document.getElementById('skillsData');
-var titleRef = rootRef.child('0');
-var bodyRef = rootRef.child('0/project');
-var dataRef = firebase.database().ref('0');
-bodyRef.on('value', function(snapshot){
-  currentData.innerText = snapshot.val();
+const preObject = document.getElementById('skillsData');
+const skillsList = document.getElementById('list');
+
+const dbRefObject = firebase.database().ref().child('object');
+const dbSkillsList = dbRefObject.child('skills');
+
+dbRefObject.on('value', snap => {
+  preObject.innerText = JSON.stringify(snap.val(), null, 3);
 });
+
+dbSkillsList.on('child_added', snap =>
+// console.log(snap.val()));
+{
+  const li = document.createElement('li');
+  li.innerText = snap.val();
+  li.id = snap.key;
+  skillsList.appendChild(li);
+});
+
+dbSkillsList.on('child_changed', snap => {
+  const liChanged = document.getElementById(snap.Key);
+  liChanged.innerText = snap.val();
+});
+
+dbSkillsList.on('child_removed', snap => {
+  const liRemoved = document.getElementById(snap.Key);
+  liRemoved.remove();
+});
+
+}());
