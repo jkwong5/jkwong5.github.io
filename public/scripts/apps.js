@@ -7,15 +7,20 @@
     $('.LI-profile-badge').slideToggle();
   });
 
+
+
   var repos = {};
   repos.all = [];
 
   repos.requestRepos = function(callback) {
     $.ajax({
-      url: 'https://api.github.com/users/jkwong5/repos',
+      url: 'https://api.github.com/users/jkwong5/repos?per_page=10&sorted=updated',
       type: 'GET',
-      // headers: {'authorization': 'token ' + githubtoken},
+      headers: {'authorization': 'token ' + githubtoken},
       success: function(data){
+        data.forEach(function(ele){
+          console.log(ele);
+        });
         repos.all = data;
       }
     }).done(callback);
@@ -41,3 +46,12 @@
       repos.with('name').map(render)
     );
   };
+
+
+  //copyright
+  var d = new Date();
+  var y = d.getFullYear();
+  document.getElementById('copy').innerHTML = y;
+
+  module.repoView = repoView;
+  module.repos = repos;
