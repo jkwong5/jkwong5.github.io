@@ -3,7 +3,7 @@
     $('.LI-profile-badge').hide();
   });
 
-  $('.linkedin').on('click', function(){
+  $('.icon-linkedin').on('click', function(){
     $('.LI-profile-badge').slideToggle();
   });
 
