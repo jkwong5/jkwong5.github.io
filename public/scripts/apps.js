@@ -16,7 +16,7 @@
     $.ajax({
       url: 'https://api.github.com/users/jkwong5/repos?per_page=10&sorted=updated',
       type: 'GET',
-      headers: {'authorization': 'token ' + githubtoken},
+      // headers: {'authorization': 'token ' + githubtoken},
       success: function(data){
         data.forEach(function(ele){
           console.log(ele);

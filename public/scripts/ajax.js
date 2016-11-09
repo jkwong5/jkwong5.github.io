@@ -35,9 +35,6 @@
     }
   };
 
-
-
-
   var repos = {};
   repos.all = [];
 
@@ -45,7 +42,7 @@
     $.ajax({
       url: 'github/user/repos',
       type: 'GET',
-      headers: {'authorization': 'token ' + githubtoken},
+      // headers: {'authorization': 'token ' + githubtoken},
       success: function(data){
         repos.all = data;
       }

@@ -94,3 +94,16 @@
 .works div img{
   width: 300px;
   }
+
+.footer p:first-child {
+  float: left;
+  font-size: 1.5em;
+}
+
+.footer a {
+  text-decoration: none;
+}
+
+.footer p:nth-child(2) {
+  float: right;
+}
