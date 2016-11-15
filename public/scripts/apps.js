@@ -7,8 +7,6 @@
     $('.LI-profile-badge').slideToggle();
   });
 
-
-
   var repos = {};
   repos.all = [];
 
@@ -47,11 +45,57 @@
     );
   };
 
+  function Project(opts){
+    this.name = opts.name;
+    this.repository = opts.repository;
+    this.blurb = opts.blurb;
+    this.category = opts.category;
+    this.status = opts.status;
+    this.pic = opts.pic;
+    this.url = opts.url;
+  }
+
+  var projectView = {};
+
+  Project.all = [];
+
+  projectView.initIndexPage = function(){
+    Project.all.forEach(function(a){
+      $('#projectData').append(a.toHtml());
+    });
+  };
+
+  Project.prototype.toHtml = function(){
+    var temp = Handlebars.compile($('#projectTemplate').text());
+    return temp(this);
+  };
+
+  Project.loadAll = function(data) {
+    data.forEach(function(e){
+      Project.all.push(new Project(e));
+    });
+  };
+
+  Project.fetchAll = function(){
+    if (localStorage.data){
+      Project.loadAll(JSON.parse(localStorage.data));
+      projectView.initIndexPage();
+    } else {
+      $.getJSON('https://api.github.com/users/jkwong5/repos', function(data) {
+        Project.loadAll(data);
+        localStorage.setItem('data', JSON.stringify(data));
+        projectView.initIndexPage();
+      });
+    }
+  };
+
+  Project.fetchAll();
 
   //copyright
   var d = new Date();
   var y = d.getFullYear();
   document.getElementById('copy').innerHTML = y;
 
-  module.repoView = repoView;
-  module.repos = repos;
+  // module.repoView = repoView;
+  // module.repos = repos;
+  // module.Project = Project;

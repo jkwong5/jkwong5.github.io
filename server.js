@@ -23,9 +23,9 @@ app.listen(port, function() {
   console.log('Server started on port ' + port + '!');
 });
 
-var firebase = require("firebase/app");
+var firebase = require('firebase/app');
 // require("firebase/auth");
-require("firebase/database");
+require('firebase/database');
 
 var config = {
   // ...

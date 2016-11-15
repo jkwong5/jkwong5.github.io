@@ -29,7 +29,7 @@ const skillsList = document.getElementById('list');
 
 const dbRefObject = firebase.database().ref().child('object');
 const dbSkillsList = dbRefObject.child('skills');
-
+//
 dbRefObject.on('value', snap => {
   preObject.innerText = JSON.stringify(snap.val(), null, 3);
 });

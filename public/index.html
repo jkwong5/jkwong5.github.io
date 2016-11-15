@@ -19,12 +19,8 @@
 
   <script id="projectTemplate" type="text/x-handlebars-template">
     <article data-category='{{category}}'>
-      <h3>{{name}}</h3>
-      <a class="imageUrl" href='{{url}}'>{{{url}}}
-      </a>
-      <a class="repo" href='{{repository}}'>Repository</a>
-      <br>
-      <section class="body">{{{body}}}</section>
+      <p>{{name}}</p>
+      <!-- <section class="body">{{{body}}}</section> -->
     </article>
   </script>
 
@@ -42,6 +38,14 @@
       <p>{{watchers_count}} watching this repo</p>
       {{/if}}
     </li>
+  </script>
+
+  <script id="project-template" type="text/x-handlebars-template">
+    <div>
+      <a href="{{html}}" target="_blank"><h3>{{name}}</h3></a>
+      <a href="{{api}}" target="_blank">DEMO</a>
+      <p>Description: {{{description}}}</p>
+    </div>
   </script>
 </head>
 
@@ -76,7 +80,7 @@
       <!-- <div class="portrait"></div> -->
         <p id="greeting"></p>
         <p>I'm glad you have stopped by on my github page. I graduated from University of Illinois with a B.S. in Marketing and B.S. in Business Management.  Working for two Fortune <span title="Amazon Inc, and Microsoft Corp"> 500 companies,</span> I found myself intrigued by the user experience that is produced by talented individuals in the world of front end development.  In my five years of experience, I have grown to embrace technology as an evolving medium with an abundance of opportunities.</p>
-        <p>My mission is to become a sucessful program manager that can bring creativity, vision, and a business mindset to help humanity become more efficient and unified. My dream is to travel the world, strategize and solve problems with the power of technology. I plan to use this page as a preface to my projects on GitHub.</p>
+        <p>My mission is to become a sucessful program manager that can bring creativity, vision, and a business mindset to help humanity become more efficient and unified. My dream is to travel the world, strategize and solve problems with the power of technology. I plan to use this page as a preface to my projects on GitHub.  This page utilizes Heroku, Firebase and GitHub APIs. </p>
         <p>Thanks for stopping by!</p>
         <p>- Jonathan</p>
     </section>
@@ -88,16 +92,17 @@
     </div>
 
     <section id="project" class="tab-content">
-      <div id="projectData" class="projectData">projects
+      <div id="projectFlex"></div>
+      Here are some Repositories I am involved in:
+      <div id="projectData" class="projectData">
       </div>
-      <div id="projects"></div>
     </section>
 
 
-    <section id="repos" class="tab-content">
+    <!-- <section id="repos" class="tab-content">
           <ul>
           </ul>
-    </section>
+    </section> -->
 
     <div class="img3">
       <div class="caption">
@@ -106,7 +111,7 @@
     </div>
 
     <section class="skills">
-      <pre id="skillsData"></pre>
+      <!-- <pre id="skillsData"></pre> -->
 
       <!-- <div id="skillsData" class="fa-fw">Skills</div> -->
       <div id="dataRef" class="fa-fw">Skills</div>
