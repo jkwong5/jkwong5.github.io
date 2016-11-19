@@ -41,11 +41,14 @@
   </script>
 
   <script id="project-template" type="text/x-handlebars-template">
-    <div>
-      <a href="{{html}}" target="_blank"><h3>{{name}}</h3></a>
-      <a href="{{api}}" target="_blank">DEMO</a>
-      <p>Description: {{{description}}}</p>
-    </div>
+    <li class="block">
+      <h3 class="{{icon}}"></h3>
+      <div class="toggle">
+        <a href="{{html}}" target="_blank">{{name}}</a>
+        <a href="{{api}}" target="_blank">DEMO</a>
+        <p>Description: {{{description}}}</p>
+      </div>
+    </li>
   </script>
 </head>
 
