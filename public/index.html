@@ -19,8 +19,9 @@
 
   <script id="projectTemplate" type="text/x-handlebars-template">
     <article data-category='{{category}}'>
-      <p>{{name}}</p>
-      <!-- <section class="body">{{{body}}}</section> -->
+      <ul>
+        <li><a href='{{html_url}}' target="_blank">{{name}}</a>  {{description}}</li>
+      </ul>
     </article>
   </script>
 
@@ -42,11 +43,11 @@
 
   <script id="project-template" type="text/x-handlebars-template">
     <li class="block">
-      <h3 class="{{icon}}"></h3>
+      <a href='{{url}}' target="_blank"><img src="{{img}}" alt="" /></a>
+      <h2 class="{{icon}}">{{title}}</h2>
       <div class="toggle">
-        <a href="{{html}}" target="_blank">{{name}}</a>
+        <p>{{desription}}"</p>
         <a href="{{api}}" target="_blank">DEMO</a>
-        <p>Description: {{{description}}}</p>
       </div>
     </li>
   </script>
@@ -95,10 +96,11 @@
     </div>
 
     <section id="project" class="tab-content">
-      <div id="projectFlex"></div>
       Here are some Repositories I am involved in:
-      <div id="projectData" class="projectData">
+      <div id="projectData">
       </div>
+      <ul id="projectList"></ul>
+      <!-- <h1 id="title"></h1> -->
     </section>
 
 
@@ -114,9 +116,7 @@
     </div>
 
     <section class="skills">
-      <!-- <pre id="skillsData"></pre> -->
-
-      <!-- <div id="skillsData" class="fa-fw">Skills</div> -->
+      <pre id="skillsData"></pre>
       <div id="dataRef" class="fa-fw">Skills</div>
 
       <ul id="list"></ul>

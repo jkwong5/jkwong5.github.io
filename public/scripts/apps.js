@@ -47,11 +47,8 @@
 
   function Project(opts){
     this.name = opts.name;
-    this.repository = opts.repository;
-    this.blurb = opts.blurb;
-    this.category = opts.category;
-    this.status = opts.status;
-    this.pic = opts.pic;
+    this.html_url = opts.html_url;
+    this.description = opts.description;
     this.url = opts.url;
   }
 
