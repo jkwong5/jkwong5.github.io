@@ -107,3 +107,60 @@
 .footer p:nth-child(2) {
   float: right;
 }
+
+/*projects*/
+.block{
+  list-style-type: none;
+  text-align: center;
+}
+
+.block li{
+  display:inline-block;
+  background-color:#eee;
+  float: left;
+  padding:10px;
+  border-right:1px solid white;
+  width: 30%;
+}
+
+.block li img{
+  opacity: 0.55;
+  width: 100%;
+}
+
+.block li div{
+  width: 100%;
+  position: relative;
+}
+
+.block li h2{
+  position: absolute;
+  font-size: 18px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgb(0, 0, 0); /* fallback color */
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.block li p{
+  position: absolute;
+  font-size: 16px;
+  bottom: 0;
+  opacity: 0;
+}
+
+.block li p:hover{
+  opacity: 1;
+}
+
+.toggle{
+  text-align: center;
+  background-color:#aaa;
+  width: 100%;
+  padding:10px;
+}
+
+#projectData{
+  overflow:hidden;
+}

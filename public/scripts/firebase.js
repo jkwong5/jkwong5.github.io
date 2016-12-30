@@ -38,13 +38,13 @@ const preObject = document.getElementById('skillsData');
 const skillsList = document.getElementById('list');
 const projectsList = document.getElementById('projectList');
 //
-const dbRefObject = firebase.database().ref().child('object');
-const dbSkillsList = dbRefObject.child('skills');
+const dbRefObject = firebase.database().ref('project');
+const dbSkillsList = firebase.database().ref('object').child('skills');
 const dbProjectsList = dbRefObject.child('projects');
 
 dbRefObject.on('value', snap => {
   // preObject.innerText = JSON.stringify(snap.val(), null, 3);
-  localStorage.setItem('projects', JSON.stringify(snap.val(), null, 3));
+  localStorage.setItem('rawData', JSON.stringify(snap.val(), null, 3));
 });
 
 dbSkillsList.on('child_added', snap =>
@@ -56,14 +56,14 @@ dbSkillsList.on('child_added', snap =>
 });
 // console.log(snap.val()));
 
-dbProjectsList.on('child_added', snap =>
-// console.log(snap.val()));
-{
-  const li = document.createElement('li');
-  li.innerText = snap.val();
-  li.id = snap.key;
-  projectsList.appendChild(li);
-});
+// dbProjectsList.on('child_added', snap =>
+// // console.log(snap.val()));
+// {
+//   const li = document.createElement('li');
+//   li.innerText = snap.val();
+//   li.id = snap.key;
+//   projectsList.appendChild(li);
+// });
 
 dbSkillsList.on('child_changed', snap => {
   const liChanged = document.getElementById(snap.Key);

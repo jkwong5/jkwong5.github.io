@@ -17,7 +17,7 @@
   <script src="https://www.gstatic.com/firebasejs/3.4.0/firebase-database.js"></script>
   <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
 
-  <script id="projectTemplate" type="text/x-handlebars-template">
+  <script id="repoTemplate" type="text/x-handlebars-template">
     <article data-category='{{category}}'>
       <ul>
         <li><a href='{{html_url}}' target="_blank">{{name}}</a>  {{description}}</li>
@@ -41,15 +41,16 @@
     </li>
   </script>
 
-  <script id="project-template" type="text/x-handlebars-template">
-    <li class="block">
-      <a href='{{url}}' target="_blank"><img src="{{img}}" alt="" /></a>
-      <h2 class="{{icon}}">{{title}}</h2>
-      <div class="toggle">
-        <p>{{desription}}"</p>
-        <a href="{{api}}" target="_blank">DEMO</a>
-      </div>
-    </li>
+  <script id="projectTemplate" type="text/x-handlebars-template">
+    <ul class="block">
+      <li>
+        <div>
+        <a href='{{url}}' target="_blank"><img src="{{img}}" alt="" /></a>
+        <h2 class="{{icon}}">{{name}}</h2>
+          <p>{{description}}<a href='{{repository}}' target="_blank">..DEMO</a></p>
+        </div>
+      </li>
+    </ul>
   </script>
 </head>
 
@@ -96,10 +97,11 @@
     </div>
 
     <section id="project" class="tab-content">
-      Here are some Repositories I am involved in:
-      <div id="projectData">
-      </div>
-      <ul id="projectList"></ul>
+      <div id="projectData"></div>
+      <!-- <div id="projectList"></div> -->
+      <br>
+      <p class="toggle">Click here to see some Repositories I am involved in:</p>
+      <div id="repoData"></div>
       <!-- <h1 id="title"></h1> -->
     </section>
 
@@ -132,10 +134,10 @@
   </p>
   <p>Jonathan Wong &copy; <span id="copy"></span> Seattle, WA</p>
 </footer>
-<script src="/scripts/githubtoken.js"></script>
+<!-- <script src="/scripts/githubtoken.js"></script> -->
 <script type="text/javascript" src="scripts/apps.js"></script>
+<script type="text/javascript" src="scripts/firebase.js"></script>
 <!-- <script type="text/javascript" src="scripts/ajax.js"></script> -->
 <!-- <script type="text/javascript" src="script.js"></script> -->
-<script type="text/javascript" src="scripts/firebase.js"></script>
 </body>
 </html>
