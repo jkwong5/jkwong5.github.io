@@ -8,7 +8,7 @@
   <link rel="stylesheet" type="text/css" href="styles/base.css">
   <link rel="stylesheet" type="text/css" href="styles/layout.css">
   <link rel="stylesheet" type="text/css" href="styles/module.css">
-  <link rel="stylesheet" href="vendor/fontello.css">
+  <link rel="stylesheet" type="text/css" href="vendor/fontello.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.min.js"></script>
   <script src="https://www.gstatic.com/firebasejs/3.4.1/firebase.js"></script>
@@ -75,19 +75,25 @@
     <div class="banner"></div>
 
     <section class="profile">
-      <div class="icon-linkedin">
-        <div class="LI-profile-badge"  data-version="v1" data-size="large" data-locale="en_US" data-type="horizontal" data-theme="dark" data-vanity="jonkwong"><a class="LI-simple-link" href="https://www.linkedin.com/in/jonkwong?trk=profile-badge">Jonathan Wong</a></div>
-        </div>
+
     </section>
 
     <section class="about">
+      <div class="icon-linkedin">
+      </div>
+      <!-- <div class="icon-doc-inv-1">
+      </div> -->
+      <div class="LI-profile-badge"  data-version="v1" data-size="large" data-locale="en_US" data-type="horizontal" data-theme="dark" data-vanity="jonkwong"><a class="LI-simple-link" href="https://www.linkedin.com/in/jonkwong?trk=profile-badge"></a>
+      </div>
       <!-- <h1>About Me</h1> -->
       <!-- <div class="portrait"></div> -->
+      <div class="intro">
         <p id="greeting"></p>
         <p>I'm glad you have stopped by on my github page. I graduated from University of Illinois with a B.S. in Marketing and B.S. in Business Management.  Working for two Fortune <span title="Amazon Inc, and Microsoft Corp"> 500 companies,</span> I found myself intrigued by the user experience that is produced by talented individuals in the world of front end development.  In my five years of experience, I have grown to embrace technology as an evolving medium with an abundance of opportunities.</p>
         <p>My mission is to become a sucessful program manager that can bring creativity, vision, and a business mindset to help humanity become more efficient and unified. My dream is to travel the world, strategize and solve problems with the power of technology. I plan to use this page as a preface to my projects on GitHub.  This page utilizes Heroku, Firebase and GitHub APIs. </p>
         <p>Thanks for stopping by!</p>
         <p>- Jonathan</p>
+      </div>
     </section>
 
     <div class="img2">
@@ -100,16 +106,10 @@
       <div id="projectData"></div>
       <!-- <div id="projectList"></div> -->
       <br>
-      <p class="toggle">Click here to see some Repositories I am involved in:</p>
+      <div class="toggle"><p class="icon-down-open">Click to see some Repositories I am involved in:<span class="icon-down-open"></span></p></div>
       <div id="repoData"></div>
       <!-- <h1 id="title"></h1> -->
     </section>
-
-
-    <!-- <section id="repos" class="tab-content">
-          <ul>
-          </ul>
-    </section> -->
 
     <div class="img3">
       <div class="caption">
@@ -118,21 +118,24 @@
     </div>
 
     <section class="skills">
-      <pre id="skillsData"></pre>
-      <div id="dataRef" class="fa-fw">Skills</div>
-
+      <!-- <pre id="skillsData"></pre> -->
+      <div id="dataRef" class="fa-fw">Here are a list of skills I posess.</div>
       <ul id="list"></ul>
-      <a href="#top">&uArr;</a>
+      <p><a href="#top" class="icon-up-big"></a></p>
     </section>
 
 <!--Footer-->
-<footer class="footer">
-  <p>
-    <a class="icon-mail" href="mailto:jkwong5@gmail.com?Subject=Your%20Profile"></a>
-    <a class="icon-linkedin-squared" href="https://www.linkedin.com/in/jonkwong"></a>
-    <a class="icon-git-squared" href="https://github.com/jkwong5"></a>
-  </p>
-  <p>Jonathan Wong &copy; <span id="copy"></span> Seattle, WA</p>
+<footer>
+  <div class="footer">
+    <p>
+      <a class="icon-mail-squared" href="mailto:jkwong5@gmail.com?Subject=Your%20Profile"></a>
+      <a class="icon-linkedin-squared" href="https://www.linkedin.com/in/jonkwong"></a>
+      <a class="icon-github-squared" href="https://github.com/jkwong5"></a>
+      <a class="icon-facebook-squared" href="https://www.facebook.com/jkwong5"></a>
+      <a class="icon-youtube-squared" href="https://www.youtube.com/channel/UCAJlw8graNE3kMvnON5Mg0w"></a>
+    </p>
+    <p>Jonathan Wong &copy; <span id="copy"></span> Seattle, WA</p>
+  </div>
 </footer>
 <!-- <script src="/scripts/githubtoken.js"></script> -->
 <script type="text/javascript" src="scripts/apps.js"></script>

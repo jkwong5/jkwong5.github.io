@@ -5,6 +5,7 @@
   });
   $('.icon-linkedin').on('click', function(){
     $('.LI-profile-badge').slideToggle();
+    $('.intro').slideToggle();
   });
   $('.toggle').on('click', function(){
     $('#repoData').fadeToggle();

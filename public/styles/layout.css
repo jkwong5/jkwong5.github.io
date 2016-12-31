@@ -1,5 +1,5 @@
 /*top nav*/
-.nav{
+/*.nav{
   background-color: #131313;
   position: fixed;
   width:100%;
@@ -12,7 +12,7 @@
 .nav ul li{
     display: inline-block;
     clear: left;
-}
+}*/
 
 /*.nav ul li a{
   display: block;
@@ -40,72 +40,48 @@
   }*/
 
 .about{
-  padding: 5% 5% 5% 5%;
+  padding: 2% 0 2% 0;
   background-color:white;
 }
 
-.profile{
-  top: 20px;
-  padding: 4% 2% 0 0;
+.icon-linkedin{
   float: left;
+  padding: 3%;
 }
 
-.projects{
+.icon-doc-inv-1{
+  float: left;
+  padding: 3%;
+}
+
+.intro{
+  padding: 0 10% 0 10%;
+}
+
+/*.projects{
   height: 200px;
   background-color:blue;
-}
-
-.skills{
-  background-color: red;
-}
-
+}*/
 
 .panel{
   display:none;
 }
 
-
-.works{
-  height: 600px;
-}
-
-.works div:first-child{
-  float:left;
-  width: 33.33%;
-  position: relative;
+.footer{
   overflow: hidden;
-  left:0;
+  background-color: black;
 }
 
-.works div:nth-child(2){
-  float: left;
-  width: 33.33%;
-  position:relative;
-  overflow: hidden;
-}
-
-.works div:last-child{
-  float: left;
-  width:33.33%;
-  position: relative;
-  overflow: hidden;
-}
-
-.works div img{
-  width: 300px;
-  }
-
-.footer p:first-child {
-  float: left;
-  font-size: 1.5em;
+.footer p:nth-child(2){
+  color: #eee;
+  text-align: right;
+  top: 100em;
 }
 
 .footer a {
   text-decoration: none;
-}
-
-.footer p:nth-child(2) {
-  float: right;
+  font-size: 2em;
+  color: #eee;
 }
 
 /*projects*/
@@ -156,11 +132,33 @@
 
 .toggle{
   text-align: center;
-  background-color:#aaa;
-  width: 100%;
+  padding: 5% 0 2% 0;
+}
+
+.toggle p{
+  display:inline-block;
+  margin:auto;
+  border: 2px solid #aaa;
+  background-color:#bbb;
   padding:10px;
 }
 
 #projectData{
   overflow:hidden;
+}
+
+.skills{
+  padding: 5%;
+}
+
+.skills p{
+  text-align: center;
+}
+
+.skills a{
+  text-decoration: none;
+}
+
+#dataRef{
+  padding-left: 2em;
 }
