@@ -143,6 +143,10 @@
   padding:10px;
 }
 
+.project{
+  padding: 5%;
+}
+
 #projectData{
   overflow:hidden;
 }
