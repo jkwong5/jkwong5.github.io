@@ -2,25 +2,30 @@
   "name": "jkwong5.github.io",
   "version": "1.0.0",
   "description": "",
+  "engines": {
+    "node": "5.9.1"
+  },
   "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
   "dependencies": {
-    "express": "^4.14.0",
+    "ejs": "2.4.1",
+    "express": "^4.13.3",
     "firebase": "^3.4.1",
     "npm": "^3.10.5"
   },
-  "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
-  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jkwong5/jkwong5.github.io.git"
+    "url": "https://github.com/jkwong5/jkwong5.github.io.git"
   },
+  "keywords": [
+    "node",
+    "heroku",
+    "express"
+  ],
   "author": "Jonathan Wong",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/jkwong5/jkwong5.github.io/issues"
-  },
-  "homepage": "https://github.com/jkwong5/jkwong5.github.io#readme"
-}
+  }
