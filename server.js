@@ -1,4 +1,4 @@
-// var requestProxy = require('express-request-proxy'),
+// var requestProxy = require('express-request-proxy');
 var express = require('express');
 var app = express();
 
@@ -18,10 +18,10 @@ app.get('/', function(request, response) {
 });
 
 // app.get('/github/*', proxyGitHub);
-// app.get('*', function(request, response) {
-//   console.log('New request:', request.url);
-//   response.sendFile('index.html', { root: '.' });
-// });
+app.get('*', function(request, response) {
+  console.log('New request:', request.url);
+  response.sendFile('index.html', { root: '.' });
+});
 
 app.listen(app.get('port'), function() {
   console.log('Server started on port ', app.get('port'));
