@@ -82,6 +82,7 @@
   text-decoration: none;
   font-size: 2em;
   color: #eee;
+  float: left;
 }
 
 /*projects*/
@@ -95,7 +96,7 @@
   background-color:#eee;
   float: left;
   padding:10px;
-  border:1px solid white;
+  border:2px solid white;
   width: 30%;
 }
 
@@ -113,11 +114,13 @@
 .block li h2{
   position: absolute;
   font-size: 18px;
+  color: white;
+  text-shadow: 1px 1px 1px #000;
   top: 0;
   left: 0;
   width: 100%;
   background: rgb(0, 0, 0); /* fallback color */
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.3);
 }
 
 .block li p{
@@ -129,21 +132,23 @@
 
 .block li p:hover{
   opacity: 1;
+  color: white;
+  background: rgb(0, 0, 0); /* fallback color */
+  background: rgba(0, 0, 0, 0.6);
 }
 
 .toggle{
   text-align: center;
-  padding: 5% 0 2% 0;
+  padding: 5% 0 5% 0;
 }
 
 .toggle p{
   display:inline-block;
   margin:auto;
-  color: white;
+  /*color: white;*/
   border: 2px solid #aaa;
-  background-color:#bbb;
+  /*background-color:#bbb;*/
   padding:10px;
-  text-shadow: 2px;
 }
 
 .project{
