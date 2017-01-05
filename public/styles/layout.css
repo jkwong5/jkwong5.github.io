@@ -152,6 +152,7 @@
 
 .project{
   margin: 0 auto;
+  margin-top: 5%;
 }
 
 #projectData{
@@ -168,10 +169,6 @@
 
 .skills a{
   text-decoration: none;
-}
-
-#dataRef{
-  padding: 2em;
 }
 
 #list{

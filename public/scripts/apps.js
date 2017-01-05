@@ -7,6 +7,7 @@
   $('.icon-linkedin').on('click', function(){
     $('.LI-profile-badge').slideToggle();
     $('.intro').slideToggle();
+    $('.icon-doc-inv-1').slideToggle();
   });
   $('.toggle').on('click', function(){
     $('#repoData').fadeToggle();
@@ -14,6 +15,7 @@
   $('.icon-doc-inv-1').on('click', function(){
     $('.LI-resume').slideToggle();
     $('.intro').slideToggle();
+    $('.icon-linkedin').slideToggle();
   });
 
   //greeting
