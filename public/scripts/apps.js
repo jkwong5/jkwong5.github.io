@@ -1,6 +1,7 @@
 //nav show and hide content
   $(window).on('load', function(){
     $('.LI-profile-badge').hide();
+    $('.LI-resume').hide();
     $('#repoData').hide();
   });
   $('.icon-linkedin').on('click', function(){
@@ -9,6 +10,10 @@
   });
   $('.toggle').on('click', function(){
     $('#repoData').fadeToggle();
+  });
+  $('.icon-doc-inv-1').on('click', function(){
+    $('.LI-resume').slideToggle();
+    $('.intro').slideToggle();
   });
 
   //greeting

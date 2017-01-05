@@ -44,24 +44,17 @@
   background-color:white;
 }
 
-.icon-linkedin{
+.icons{
   float: left;
-  padding: 3%;
-}
-
-.icon-doc-inv-1{
-  float: left;
-  padding: 3%;
 }
 
 .intro{
   padding: 0 10% 0 10%;
 }
 
-/*.projects{
-  height: 200px;
-  background-color:blue;
-}*/
+.LI-resume{
+  padding: 0 10% 0 10%;
+}
 
 .panel{
   display:none;
@@ -85,6 +78,13 @@
   float: left;
 }
 
+#up a{
+  text-decoration: none;
+  display : block;
+  text-align : center;
+  padding-bottom: 2em;
+}
+
 /*projects*/
 .block{
   list-style-type: none;
@@ -95,15 +95,14 @@
   display:inline-block;
   background-color:#eee;
   float: left;
-  padding:10px;
-  border:2px solid white;
-  width: 30%;
-}
+  padding: 1%;
+  border:3px solid white;
+  width: 30%;}
 
 .block li img{
   opacity: 0.35;
   width: 100%;
-  max-height: 200px;
+  max-height: 12em;
 }
 
 .block li div{
@@ -152,7 +151,7 @@
 }
 
 .project{
-  padding: 5%;
+  margin: 0 auto;
 }
 
 #projectData{
@@ -172,5 +171,13 @@
 }
 
 #dataRef{
-  padding-left: 2em;
+  padding: 2em;
+}
+
+#list{
+  float: left;
+}
+
+#list2{
+  text-align: right;
 }
