@@ -16,6 +16,10 @@ li a{
   text-decoration: none;
 }
 
+li a:visited{
+  color: grey;
+}
+
 img{
   max-width: 100%
 }
