@@ -61,13 +61,6 @@
     });
   };
 
-  Project.fetchAll = function(){
-    if (localStorage.rawData){
-      Project.loadAll(JSON.parse(localStorage.rawData));
-      projectView.initIndexPage();
-    }
-  };
-
   function Repo(opts){
     this.name = opts.name;
     this.html_url = opts.html_url;
@@ -109,7 +102,6 @@
   };
 
   Repo.fetchAll();
-  Project.fetchAll();
   //copyright
   var d = new Date();
   var y = d.getFullYear();

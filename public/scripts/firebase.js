@@ -42,10 +42,19 @@ const dbRefObject = firebase.database().ref('project');
 const dbSkillsList = firebase.database().ref('object').child('skills');
 const dbSkills2List = firebase.database().ref('object').child('skills2');
 
-dbRefObject.on('value', snap => {
-  // preObject.innerText = JSON.stringify(snap.val(), null, 3);
-  localStorage.setItem('rawData', JSON.stringify(snap.val(), null, 3));
-});
+Project.fetchAll = function(){
+  if (localStorage.rawData){
+    Project.loadAll(JSON.parse(localStorage.rawData));
+    projectView.initIndexPage();
+  } else {
+    dbRefObject.on('value', snap => {
+      // preObject.innerText = JSON.stringify(snap.val(), null, 3);
+      localStorage.setItem('rawData', JSON.stringify(snap.val(), null, 3));
+      Project.loadAll(JSON.parse(localStorage.rawData));
+      projectView.initIndexPage();
+    });
+  }
+};
 
 dbSkillsList.on('child_added', snap =>
 {
@@ -84,4 +93,5 @@ dbSkills2List.on('child_removed', snap => {
   liRemoved.remove();
 });
 
+Project.fetchAll();
 }());
